@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
 
-const socket = io('[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)', {
+const socket = io('https://real-estate-platform-z7k5.onrender.com', {
   transports: ['websocket', 'polling']
 });
 
@@ -56,7 +56,7 @@ function ChatBox({ propertyId, ownerId, ownerName, onClose }) {
     const fetchChatHistory = async () => {
       if (!token || !propertyId) return;
       try {
-        const res = await fetch(`[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)/api/messages/${propertyId}`, {
+        const res = await fetch(`https://real-estate-platform-z7k5.onrender.com/api/messages/${propertyId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -86,7 +86,7 @@ function ChatBox({ propertyId, ownerId, ownerName, onClose }) {
     try {
       setLoading(true);
 
-      const res = await fetch('[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)/api/messages', {
+      const res = await fetch('https://real-estate-platform-z7k5.onrender.com/api/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

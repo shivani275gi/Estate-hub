@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client';
 
-const socket = io('[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)', {
+const socket = io('https://real-estate-platform-z7k5.onrender.com', {
   autoConnect: true,
   transports: ['websocket', 'polling']
 });
