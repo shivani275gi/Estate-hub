@@ -20,7 +20,7 @@ function Properties() {
       const loc = params.get('location');
       const type = params.get('type');
 
-      let url = 'http://localhost:5000/api/properties';
+      let url = '[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)/api/properties';
       const queryParams = new URLSearchParams();
       if (loc) queryParams.append('location', loc);
       if (type && type !== 'All Types') queryParams.append('propertyType', type);

@@ -31,7 +31,7 @@ function PropertyDetails() {
   const fetchProperty = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:5000/api/properties/${id}`);
+      const res = await fetch(`[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)/api/properties/${id}`);
       const data = await res.json();
       if (res.ok) {
         setProperty(data);
@@ -60,7 +60,7 @@ function PropertyDetails() {
   const handleDelete = async () => {
     if (!window.confirm('Are you sure you want to delete this listing?')) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/properties/${id}`, {
+      const res = await fetch(`[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)/api/properties/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

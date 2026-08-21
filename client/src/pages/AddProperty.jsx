@@ -56,7 +56,7 @@ function AddProperty() {
         lng: longitude
       };
 
-      const res = await fetch('http://localhost:5000/api/properties', {
+      const res = await fetch('[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)/api/properties', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
