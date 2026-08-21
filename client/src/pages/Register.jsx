@@ -25,7 +25,7 @@ function Register() {
     setLoading(true);
 
     try {
-      const res = await fetch('[https://real-estate-platform-z7k5.onrender.com](https://real-estate-platform-z7k5.onrender.com)/api/auth/register', {
+      const res = await fetch('https://real-estate-platform-z7k5.onrender.com/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
